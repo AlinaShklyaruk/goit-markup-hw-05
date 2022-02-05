@@ -300,6 +300,25 @@ img {
   color: var(--title-color);
 }
 
+.works-item {
+  position: relative;
+}
+
+.works-item-title {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: calc(16 / 14);
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  padding: 27px 82px;
+  color: #ffffff;
+  background-color: rgba(47, 48, 58, 0.8);
+}
+
 .works-list {
   display: flex;
 }
@@ -556,6 +575,42 @@ img {
 
 .portfolio-filter-item:not(:last-child) {
   margin-right: 8px;
+}
+
+.filters-overlay {
+  position: relative;
+}
+
+.filters-overlay::before {
+  display: inline-block;
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(33, 150, 243, 0.9);
+
+  opacity: 0;
+}
+
+.filters-overlay:hover::before {
+  opacity: 1;
+}
+
+.filters-overlay-text {
+  position: absolute;
+  overflow: hidden;
+  font-size: 18px;
+  line-height: calc(28 / 18);
+  letter-spacing: 0.03em;
+  color: var(--filter-btn-text-color);
+
+  opacity: 0;
+}
+
+.filters-overlay-text:hover {
+  opacity: 1;
 }
 
 .portfolio-list {
